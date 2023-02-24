@@ -23,6 +23,7 @@ const db = knex({
 
 
 const app = express();
+const PORT = process.env.PORT || 3030;
 app.use(bodyParser.json()) // have to use bodyparser here installed and uexpress() because sending it as a JSON
 app.use(cors());
 
