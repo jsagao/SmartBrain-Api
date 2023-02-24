@@ -23,7 +23,7 @@ const db = knex({
 
 
 const app = express();
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json()) // have to use bodyparser here installed and uexpress() because sending it as a JSON
 app.use(cors());
 
@@ -43,8 +43,8 @@ app.get('/profile/:id', (req, res) => { profile.handleProfileGet(req, res, db) }
 app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
 // res = this is working
